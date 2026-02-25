@@ -3,6 +3,10 @@ title: 使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 +
 cover: /images/cover001.png
 sticky: 0
 comments: true
+categories:
+  - 技术
+tags:
+  - GitHub
 ---
 # 使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）
 
