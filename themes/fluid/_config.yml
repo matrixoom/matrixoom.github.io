@@ -892,16 +892,19 @@ cusdis:
 # Based on GitHub Discussions, similar to Utterances
 # See: https://giscus.app/
 giscus:
-  repo:
-  repo-id:
-  category:
-  category-id:
+  repo: matrixoom/matrixoom.github.io
+  repo-id: R_kgDORYcs8Q
+  category: General
+  category-id: DIC_kwDORYcs8c4C3LlB
   theme-light: light
   theme-dark: dark
   mapping: pathname
   reactions-enabled: 1
   emit-metadata: 0
-  input-position: top
+  input-position: bottom
+  theme: preferred_color_scheme
+  crossorigin: anonymous
+  strict: 0
   lang: zh-CN
 
 # Discuss
