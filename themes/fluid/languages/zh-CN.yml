@@ -7,20 +7,20 @@ home:
 archive:
   menu: '归档'
   title: '归档'
-  subtitle: '归档'
+  subtitle: 'Order Of Magnitude'
   post_total: '共计 %d 篇文章'
 
 category:
   menu: '分类'
   title: '分类'
-  subtitle: '分类'
+  subtitle: 'Out Of Memory'
   post_total: '共计 %d 篇文章'
   more: 'More...'
 
 tag:
   menu: '标签'
   title: '标签'
-  subtitle: '标签'
+  subtitle: 'Only One Matter'
   post_total: '共计 %d 篇文章'
 
 about:
