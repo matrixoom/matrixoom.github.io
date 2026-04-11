@@ -1,0 +1,893 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/matrixoom.png">
+  <link rel="icon" href="/img/matrixoom.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="matrix">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）如果你想搭建一个：  免费 稳定 可长期维护 支持评论 自动部署  的个人博客，那么这套组合非常合适：  Hexo + Fluid 主题 + GitHub Pages + GitHub Actions + Giscus  这篇文章会带你完整走一遍流程。  一、创建 GitHub Pages 仓库首">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）">
+<meta property="og:url" content="http://example.com/2025/06/10/%E4%BD%BF%E7%94%A8Hexo-Fluid-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="Matrix OOM">
+<meta property="og:description" content="使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）如果你想搭建一个：  免费 稳定 可长期维护 支持评论 自动部署  的个人博客，那么这套组合非常合适：  Hexo + Fluid 主题 + GitHub Pages + GitHub Actions + Giscus  这篇文章会带你完整走一遍流程。  一、创建 GitHub Pages 仓库首">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-10T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-09T00:31:52.689Z">
+<meta property="article:author" content="matrix">
+<meta property="article:tag" content="GitHub">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统） - Matrix OOM</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2026-02-25T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Matrix OOM</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-10 12:00" pubdate>
+          2025年6月10日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          908 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="使用-Hexo-Fluid-GitHub-Pages-搭建个人博客（含自动部署-评论系统）"><a href="#使用-Hexo-Fluid-GitHub-Pages-搭建个人博客（含自动部署-评论系统）" class="headerlink" title="使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）"></a>使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）</h1><p>如果你想搭建一个：</p>
+<ul>
+<li>免费</li>
+<li>稳定</li>
+<li>可长期维护</li>
+<li>支持评论</li>
+<li>自动部署</li>
+</ul>
+<p>的个人博客，那么这套组合非常合适：</p>
+<blockquote>
+<p>Hexo + Fluid 主题 + GitHub Pages + GitHub Actions + Giscus</p>
+</blockquote>
+<p>这篇文章会带你完整走一遍流程。</p>
+<hr>
+<h1 id="一、创建-GitHub-Pages-仓库"><a href="#一、创建-GitHub-Pages-仓库" class="headerlink" title="一、创建 GitHub Pages 仓库"></a>一、创建 GitHub Pages 仓库</h1><p>首先注册 GitHub 账号，然后创建一个特殊命名的仓库：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">username</span>&gt;</span>.github.io<br></code></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lua">matrixoom.github.<span class="hljs-built_in">io</span><br></code></pre></td></tr></table></figure>
+
+<p>⚠️ 必须用这个命名规则，这是 GitHub Pages 的约定。</p>
+<hr>
+<h1 id="二、本地部署-Hexo（Windows-示例）"><a href="#二、本地部署-Hexo（Windows-示例）" class="headerlink" title="二、本地部署 Hexo（Windows 示例）"></a>二、本地部署 Hexo（Windows 示例）</h1><h2 id="1️⃣-安装-Hexo"><a href="#1️⃣-安装-Hexo" class="headerlink" title="1️⃣ 安装 Hexo"></a>1️⃣ 安装 Hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
+
+<h2 id="2️⃣-初始化项目"><a href="#2️⃣-初始化项目" class="headerlink" title="2️⃣ 初始化项目"></a>2️⃣ 初始化项目</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init blog<br><span class="hljs-built_in">cd</span> blog<br>npm install<br></code></pre></td></tr></table></figure>
+
+<h2 id="3️⃣-启动本地服务"><a href="#3️⃣-启动本地服务" class="headerlink" title="3️⃣ 启动本地服务"></a>3️⃣ 启动本地服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server<br></code></pre></td></tr></table></figure>
+
+<p>浏览器访问：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost:4000</span><br></code></pre></td></tr></table></figure>
+
+<p>如果看到默认页面，说明安装成功。</p>
+<p>官方文档参考：<br>Hexo</p>
+<hr>
+<h1 id="三、安装-Fluid-主题"><a href="#三、安装-Fluid-主题" class="headerlink" title="三、安装 Fluid 主题"></a>三、安装 Fluid 主题</h1><p>默认主题较为简单，推荐使用 Fluid。</p>
+<p>Fluid 是一个：</p>
+<ul>
+<li>简洁现代</li>
+<li>支持评论系统</li>
+<li>支持暗黑模式</li>
+<li>SEO 友好</li>
+</ul>
+<p>的主题。</p>
+<p>官方项目：<br>Fluid</p>
+<hr>
+<h2 id="1️⃣-安装主题"><a href="#1️⃣-安装主题" class="headerlink" title="1️⃣ 安装主题"></a>1️⃣ 安装主题</h2><p>在 blog 根目录执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/fluid-dev/hexo-theme-fluid.git themes/fluid<br></code></pre></td></tr></table></figure>
+
+<h2 id="2️⃣-修改站点配置"><a href="#2️⃣-修改站点配置" class="headerlink" title="2️⃣ 修改站点配置"></a>2️⃣ 修改站点配置</h2><p>打开根目录 <code>_config.yml</code>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="3️⃣-复制主题配置文件"><a href="#3️⃣-复制主题配置文件" class="headerlink" title="3️⃣ 复制主题配置文件"></a>3️⃣ 复制主题配置文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> themes/fluid/_config.yml _config.fluid.yml<br></code></pre></td></tr></table></figure>
+
+<p>后续推荐修改 <code>_config.fluid.yml</code>，不要直接改主题目录里的文件。</p>
+<hr>
+<h1 id="四、添加博客文章"><a href="#四、添加博客文章" class="headerlink" title="四、添加博客文章"></a>四、添加博客文章</h1><h2 id="1️⃣-写文章"><a href="#1️⃣-写文章" class="headerlink" title="1️⃣ 写文章"></a>1️⃣ 写文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;我的第一篇文章&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>文件生成在：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span>/_posts/<br></code></pre></td></tr></table></figure>
+
+<h2 id="2️⃣-添加图片"><a href="#2️⃣-添加图片" class="headerlink" title="2️⃣ 添加图片"></a>2️⃣ 添加图片</h2><p>放到：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span>/images/<br></code></pre></td></tr></table></figure>
+
+<h2 id="3️⃣-本地预览"><a href="#3️⃣-本地预览" class="headerlink" title="3️⃣ 本地预览"></a>3️⃣ 本地预览</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="五、传统部署到-GitHub（手动方式）"><a href="#五、传统部署到-GitHub（手动方式）" class="headerlink" title="五、传统部署到 GitHub（手动方式）"></a>五、传统部署到 GitHub（手动方式）</h1><p>这种方式需要本地生成再上传。</p>
+<h2 id="1️⃣-修改站点配置-config-yml"><a href="#1️⃣-修改站点配置-config-yml" class="headerlink" title="1️⃣ 修改站点配置 _config.yml"></a>1️⃣ 修改站点配置 <code>_config.yml</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/YourgithubName/YourgithubName.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">main</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="2️⃣-安装部署插件"><a href="#2️⃣-安装部署插件" class="headerlink" title="2️⃣ 安装部署插件"></a>2️⃣ 安装部署插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
+
+<h2 id="3️⃣-部署"><a href="#3️⃣-部署" class="headerlink" title="3️⃣ 部署"></a>3️⃣ 部署</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo generate<br>hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>过几分钟访问：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">https:</span><span class="hljs-comment">//username.github.io</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="六、推荐方式：使用-GitHub-Actions-自动部署"><a href="#六、推荐方式：使用-GitHub-Actions-自动部署" class="headerlink" title="六、推荐方式：使用 GitHub Actions 自动部署"></a>六、推荐方式：使用 GitHub Actions 自动部署</h1><p>更现代的做法是不上传 public 文件夹，而是：</p>
+<blockquote>
+<p>上传源码 → GitHub 自动构建 → 自动部署</p>
+</blockquote>
+<hr>
+<h2 id="1️⃣-上传源码"><a href="#1️⃣-上传源码" class="headerlink" title="1️⃣ 上传源码"></a>1️⃣ 上传源码</h2><p>把 blog 文件夹内容 push 到：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">username</span>&gt;</span>.github.io<br></code></pre></td></tr></table></figure>
+
+<p>⚠️ 确保 <code>.gitignore</code> 里包含：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-keyword">public</span>/<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="2️⃣-设置-Pages-构建方式"><a href="#2️⃣-设置-Pages-构建方式" class="headerlink" title="2️⃣ 设置 Pages 构建方式"></a>2️⃣ 设置 Pages 构建方式</h2><p>进入仓库：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">Settings → Pages → <span class="hljs-selector-tag">Source</span><br></code></pre></td></tr></table></figure>
+
+<p>选择：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">GitHub Actions</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3️⃣-创建工作流文件"><a href="#3️⃣-创建工作流文件" class="headerlink" title="3️⃣ 创建工作流文件"></a>3️⃣ 创建工作流文件</h2><p>在仓库创建：</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-title">.github/workflows/pages.yml</span><br></code></pre></td></tr></table></figure>
+
+<p>内容如下（Node 版本改成你的版本）：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Pages</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">main</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v4</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Use</span> <span class="hljs-string">Node.js</span> <span class="hljs-number">20</span> <span class="hljs-comment"># Node版本号</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v4</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">&quot;20&quot;</span> <span class="hljs-comment"># Node版本号</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">Dependencies</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">install</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">run</span> <span class="hljs-string">build</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Upload</span> <span class="hljs-string">Pages</span> <span class="hljs-string">artifact</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/upload-pages-artifact@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">path:</span> <span class="hljs-string">./public</span><br>  <span class="hljs-attr">deploy:</span><br>    <span class="hljs-attr">needs:</span> <span class="hljs-string">build</span><br>    <span class="hljs-attr">permissions:</span><br>      <span class="hljs-attr">pages:</span> <span class="hljs-string">write</span><br>      <span class="hljs-attr">id-token:</span> <span class="hljs-string">write</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/deploy-pages@v4</span><br></code></pre></td></tr></table></figure>
+
+<p>以后你只需要：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push<br></code></pre></td></tr></table></figure>
+
+<p>博客就会自动更新。</p>
+<hr>
+<h1 id="七、开启评论系统（推荐-Giscus）"><a href="#七、开启评论系统（推荐-Giscus）" class="headerlink" title="七、开启评论系统（推荐 Giscus）"></a>七、开启评论系统（推荐 Giscus）</h1><p>因为 GitHub Pages 是静态托管，所以必须使用第三方评论系统。</p>
+<p>推荐使用：</p>
+<p>Giscus</p>
+<p>它基于 GitHub Discussions，稳定且免费。</p>
+<hr>
+<h2 id="1️⃣-开启-Discussions"><a href="#1️⃣-开启-Discussions" class="headerlink" title="1️⃣ 开启 Discussions"></a>1️⃣ 开启 Discussions</h2><p>进入仓库：</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-variable">Settings</span> → <span class="hljs-built_in">General</span> → <span class="hljs-variable">Features</span><br></code></pre></td></tr></table></figure>
+
+<p>勾选：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">Discussions</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="2️⃣-安装-Giscus-App"><a href="#2️⃣-安装-Giscus-App" class="headerlink" title="2️⃣ 安装 Giscus App"></a>2️⃣ 安装 Giscus App</h2><p>访问：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">https:</span><span class="hljs-comment">//giscus.app</span><br></code></pre></td></tr></table></figure>
+
+<p>授权你的仓库。</p>
+<hr>
+<h2 id="3️⃣-配置-Fluid-主题"><a href="#3️⃣-配置-Fluid-主题" class="headerlink" title="3️⃣ 配置 Fluid 主题"></a>3️⃣ 配置 Fluid 主题</h2><p>打开 <code>_config.fluid.yml</code>：</p>
+<p>启用评论：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">post:</span><br>  <span class="hljs-attr">comments:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+
+<p>设置评论类型：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">comments:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">giscus</span><br></code></pre></td></tr></table></figure>
+
+<p>添加 giscus 配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">giscus:</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">username/username.github.io</span><br>  <span class="hljs-attr">repo_id:</span> <span class="hljs-string">你的repo_id</span><br>  <span class="hljs-attr">category:</span> <span class="hljs-string">General</span><br>  <span class="hljs-attr">category_id:</span> <span class="hljs-string">你的category_id</span><br>  <span class="hljs-attr">mapping:</span> <span class="hljs-string">pathname</span><br>  <span class="hljs-attr">reaction:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">theme:</span> <span class="hljs-string">light</span><br>  <span class="hljs-attr">lang:</span> <span class="hljs-string">zh-CN</span><br></code></pre></td></tr></table></figure>
+
+<p>这些 ID 在 giscus 官网生成。</p>
+<hr>
+<h2 id="4️⃣-推送更新"><a href="#4️⃣-推送更新" class="headerlink" title="4️⃣ 推送更新"></a>4️⃣ 推送更新</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;enable giscus&quot;</span><br>git push<br></code></pre></td></tr></table></figure>
+
+<p>几分钟后评论区就会出现。</p>
+<hr>
+<h1 id="八、自定义域名（可选）"><a href="#八、自定义域名（可选）" class="headerlink" title="八、自定义域名（可选）"></a>八、自定义域名（可选）</h1><p>如果你有域名：</p>
+<p>在：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span>/<br></code></pre></td></tr></table></figure>
+
+<p>创建文件：</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dns"><span class="hljs-keyword">CNAME</span><br></code></pre></td></tr></table></figure>
+
+<p>内容写你的域名：</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs maxima">www.<span class="hljs-built_in">example</span>.com<br></code></pre></td></tr></table></figure>
+
+<p>部署后即可生效。</p>
+<p>官方说明参考：<br>GitHub Pages</p>
+<hr>
+<h1 id="九、最终博客架构"><a href="#九、最终博客架构" class="headerlink" title="九、最终博客架构"></a>九、最终博客架构</h1><p>现在你的博客结构是：</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs arcade">本地写作<br>    ↓<br>git <span class="hljs-built_in">push</span><br>    ↓<br>GitHub Actions 自动构建<br>    ↓<br>GitHub Pages 发布<br>    ↓<br>Giscus 提供评论<br></code></pre></td></tr></table></figure>
+
+<p>完全免费，完全自动化。</p>
+<hr>
+<h1 id="十、总结"><a href="#十、总结" class="headerlink" title="十、总结"></a>十、总结</h1><p>你现在拥有：</p>
+<ul>
+<li>静态博客框架：Hexo</li>
+<li>现代主题：Fluid</li>
+<li>免费托管：GitHub Pages</li>
+<li>自动部署：GitHub Actions</li>
+<li>评论系统：Giscus</li>
+</ul>
+<p>这是一套非常成熟、稳定、适合长期维护的博客方案。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/GitHub/" class="print-no-link">#GitHub</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）</div>
+      <div>http://example.com/2025/06/10/使用Hexo-Fluid-GitHubPages搭建个人博客/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>matrix</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月10日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2026/04/08/MemPalace-AI%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" title="MemPalace技术深度解析：开源AI记忆系统的架构设计与性能分析">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">MemPalace技术深度解析：开源AI记忆系统的架构设计与性能分析</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"matrixoom/matrixoom.github.io","repo-id":"R_kgDORYcs8Q","category":"General","category-id":"DIC_kwDORYcs8c4C3LlB","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"bottom","theme":"preferred_color_scheme","crossorigin":"anonymous","strict":0,"lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

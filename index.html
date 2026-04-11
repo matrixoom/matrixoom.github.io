@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/matrixoom.png">
+  <link rel="icon" href="/img/matrixoom.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="matrix">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Open Our Minds, Out Of Memory, Order Of Magnitude">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Matrix OOM">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Matrix OOM">
+<meta property="og:description" content="Open Our Minds, Out Of Memory, Order Of Magnitude">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="matrix">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Matrix OOM</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2026-02-25T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Matrix OOM</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Open Our Minds, Out Of Memory, Order Of Magnitude"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/04/11/%E8%82%A1%E5%B8%82%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%80-K%E7%BA%BF%E5%9F%BA%E7%A1%80/" target="_self">
+          股市技术分析学习路线（一）：K线基础——从一根蜡烛读懂多空博弈
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/04/11/%E8%82%A1%E5%B8%82%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%80-K%E7%BA%BF%E5%9F%BA%E7%A1%80/" target="_self">
+        <div>
+          股市技术分析学习路线（一）：K线基础——从一根蜡烛读懂多空博弈 这是一切的根基。K线是市场的”字母表”，后面的形态、指标都建立在对K线语言的理解之上。这个阶段务必扎实，宁可多花一周也不要囫囵吞枣。   本阶段学习目标 看到任何一根K线，能在3秒内判断多空力量对比 看到K线组合，能判断它是反转信号还是持续信号 能在任何股票图表上准确画出趋势线 能标出关键支撑位和阻力位 理解不同时间周期K线的含义和关
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-04-11 12:00" pubdate>
+              2026-04-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%87%91%E8%9E%8D%E6%8A%95%E8%B5%84/" class="category-chain-item">金融投资</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/">#技术分析</a>
+            
+              <a href="/tags/K%E7%BA%BF/">#K线</a>
+            
+              <a href="/tags/%E8%82%A1%E7%A5%A8/">#股票</a>
+            
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">#学习路线</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/04/09/%E4%BB%8E%E9%B1%BC%E7%BE%A4%E5%88%B0%E6%99%BA%E8%83%BD%E4%BD%93-%E7%BE%A4%E4%BD%93%E6%99%BA%E8%83%BD%E7%90%86%E8%AE%BA%E5%85%A8%E6%99%AF%E7%BB%BC%E8%BF%B0/" target="_self">
+          从鱼群到智能体：群体智能理论全景综述——从自然涌现到AI预测引擎
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/04/09/%E4%BB%8E%E9%B1%BC%E7%BE%A4%E5%88%B0%E6%99%BA%E8%83%BD%E4%BD%93-%E7%BE%A4%E4%BD%93%E6%99%BA%E8%83%BD%E7%90%86%E8%AE%BA%E5%85%A8%E6%99%AF%E7%BB%BC%E8%BF%B0/" target="_self">
+        <div>
+          从鱼群到智能体：群体智能理论全景综述——从自然涌现到AI预测引擎引言一群蚂蚁，没有中央指挥，却能建造出结构精妙的巢穴；一群椋鸟，没有排练，却能在天空中编织出令人窒息的编队舞；一个市场，没有人设计，却能通过价格信号高效分配资源。 这些现象背后，是同一个底层逻辑：群体智能（Swarm Intelligence）——简单的个体遵循简单的规则，通过局部交互，涌现出超越任何个体能力的集体行为。 2024年，
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-04-09 09:30" pubdate>
+              2026-04-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/AI%E6%8A%80%E6%9C%AF/" class="category-chain-item">AI技术</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/AI%E6%8A%80%E6%9C%AF/%E5%AD%A6%E6%9C%AF%E7%BB%BC%E8%BF%B0/" class="category-chain-item">学术综述</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%BE%A4%E4%BD%93%E6%99%BA%E8%83%BD/">#群体智能</a>
+            
+              <a href="/tags/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%B3%BB%E7%BB%9F/">#多智能体系统</a>
+            
+              <a href="/tags/%E6%B6%8C%E7%8E%B0/">#涌现</a>
+            
+              <a href="/tags/%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F/">#复杂系统</a>
+            
+              <a href="/tags/Agent%E4%BB%BF%E7%9C%9F/">#Agent仿真</a>
+            
+              <a href="/tags/%E7%A4%BE%E4%BC%9A%E6%A8%A1%E6%8B%9F/">#社会模拟</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/04/09/MiroFish-%E7%BE%A4%E4%BD%93%E6%99%BA%E8%83%BD%E5%BC%95%E6%93%8E%E6%B7%B1%E5%BA%A6%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" target="_self">
+          MiroFish深度源码分析：群体智能引擎的架构设计与实现原理
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/04/09/MiroFish-%E7%BE%A4%E4%BD%93%E6%99%BA%E8%83%BD%E5%BC%95%E6%93%8E%E6%B7%B1%E5%BA%A6%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" target="_self">
+        <div>
+          MiroFish深度源码分析：群体智能引擎的架构设计与实现原理引言：用数字沙盘预演未来如果你能提前看到一条政策的发布会引发怎样的舆论风暴，如果你能推演一本小说失传的结局会走向何方，如果你能在零风险中试错每一个”如果”——这就是 MiroFish 想要做的事。 MiroFish 是一款基于多智能体群体智能技术的 AI 预测引擎，由盛大集团战略孵化和支持，仿真引擎基于 CAMEL-AI 团队的开源项目
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-04-09 08:00" pubdate>
+              2026-04-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/AI%E6%8A%80%E6%9C%AF/" class="category-chain-item">AI技术</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/AI%E6%8A%80%E6%9C%AF/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" class="category-chain-item">开源项目</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BC%80%E6%BA%90/">#开源</a>
+            
+              <a href="/tags/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93/">#多智能体</a>
+            
+              <a href="/tags/%E7%BE%A4%E4%BD%93%E6%99%BA%E8%83%BD/">#群体智能</a>
+            
+              <a href="/tags/OASIS/">#OASIS</a>
+            
+              <a href="/tags/Zep/">#Zep</a>
+            
+              <a href="/tags/%E7%A4%BE%E4%BC%9A%E4%BB%BF%E7%9C%9F/">#社会仿真</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/04/08/MemPalace-AI%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" target="_self">
+          MemPalace技术深度解析：开源AI记忆系统的架构设计与性能分析
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/04/08/MemPalace-AI%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" target="_self">
+        <div>
+          MemPalace技术深度解析：开源AI记忆系统的架构设计与性能分析引言：AI记忆的挑战与机遇在当今的AI应用生态中，大型语言模型（LLM）如ChatGPT、Claude等已成为开发者和技术团队日常工作的核心工具。然而，这些系统存在一个根本性缺陷：会话记忆的短暂性。 问题的本质每一次AI对话都是独立的会话。当会话结束时，所有的讨论、决策、技术方案和上下文信息都会丢失。这意味着：  技术决策的重复讨
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-04-08 09:00" pubdate>
+              2026-04-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/AI%E6%8A%80%E6%9C%AF/" class="category-chain-item">AI技术</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/AI%E6%8A%80%E6%9C%AF/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" class="category-chain-item">开源项目</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/AI%E8%AE%B0%E5%BF%86/">#AI记忆</a>
+            
+              <a href="/tags/%E6%9C%AC%E5%9C%B0AI/">#本地AI</a>
+            
+              <a href="/tags/ChromaDB/">#ChromaDB</a>
+            
+              <a href="/tags/MCP%E5%8D%8F%E8%AE%AE/">#MCP协议</a>
+            
+              <a href="/tags/%E5%BC%80%E6%BA%90/">#开源</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/06/10/%E4%BD%BF%E7%94%A8Hexo-Fluid-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_self">
+          使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/06/10/%E4%BD%BF%E7%94%A8Hexo-Fluid-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_self">
+        <div>
+          使用 Hexo + Fluid + GitHub Pages 搭建个人博客（含自动部署 + 评论系统）如果你想搭建一个：  免费 稳定 可长期维护 支持评论 自动部署  的个人博客，那么这套组合非常合适：  Hexo + Fluid 主题 + GitHub Pages + GitHub Actions + Giscus  这篇文章会带你完整走一遍流程。  一、创建 GitHub Pages 仓库首
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-06-10 12:00" pubdate>
+              2025-06-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/GitHub/">#GitHub</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
