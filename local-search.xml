@@ -90,8 +90,6 @@
     
     <tags>
       
-      <tag>开源</tag>
-      
       <tag>多智能体</tag>
       
       <tag>群体智能</tag>
@@ -101,6 +99,8 @@
       <tag>Zep</tag>
       
       <tag>社会仿真</tag>
+      
+      <tag>开源</tag>
       
     </tags>
     
@@ -127,6 +127,8 @@
     
     <tags>
       
+      <tag>开源</tag>
+      
       <tag>AI记忆</tag>
       
       <tag>本地AI</tag>
@@ -134,8 +136,6 @@
       <tag>ChromaDB</tag>
       
       <tag>MCP协议</tag>
-      
-      <tag>开源</tag>
       
     </tags>
     
