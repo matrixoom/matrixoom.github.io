@@ -3,7 +3,16 @@ name: Pages
 on:
   push:
     branches:
-      - hexo-source # 源码分支，push时触发构建
+      - hexo-source
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -12,7 +21,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: hexo-source
-          token: ${{ secrets.GITHUB_TOKEN }}
           submodules: recursive
       - name: Use Node.js 24
         uses: actions/setup-node@v4
@@ -35,13 +43,10 @@ jobs:
           path: ./public
   deploy:
     needs: build
-    permissions:
-      pages: write
-      id-token: write
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
