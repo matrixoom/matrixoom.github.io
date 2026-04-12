@@ -99,8 +99,5 @@ ignore:
 theme: fluid
 
 # Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: git@github.com:matrixoom/matrixoom.github.io.git
-  branch: main
+## 已改用 GitHub Actions 自动构建部署（监听 hexo-source 分支 push）
+## 不再使用 hexo deploy，请勿添加 deploy 配置
