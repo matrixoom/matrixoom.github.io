@@ -656,98 +656,105 @@ K线（蜡烛图）起源于18世纪日本大阪的稻米期货市场，由米�
 | **持续缺口** | 趋势中途出现，加速趋势 | 趋势强劲的确认 | 中等 |
 | **竭尽缺口** | 趋势末端出现，很快被回补 | 趋势即将结束 | 几乎100% |
 
-<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:20px auto;max-width:100%;">
-  <rect width="700" height="320" fill="#1a1f2e" rx="8"/>
+<svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:20px auto;max-width:100%;">
+  <rect width="700" height="380" fill="#1a1f2e" rx="8"/>
   <!-- 横盘区K线 -->
-  <rect x="30" y="160" width="18" height="25" fill="#e74c3c" rx="1"/>
-  <line x1="39" y1="160" x2="39" y2="150" stroke="#aaa" stroke-width="1"/>
-  <line x1="39" y1="185" x2="39" y2="195" stroke="#aaa" stroke-width="1"/>
-  <rect x="55" y="165" width="18" height="20" fill="#2ecc71" rx="1"/>
-  <line x1="64" y1="165" x2="64" y2="155" stroke="#aaa" stroke-width="1"/>
-  <line x1="64" y1="185" x2="64" y2="195" stroke="#aaa" stroke-width="1"/>
-  <rect x="80" y="170" width="18" height="22" fill="#e74c3c" rx="1"/>
-  <line x1="89" y1="170" x2="89" y2="160" stroke="#aaa" stroke-width="1"/>
-  <line x1="89" y1="192" x2="89" y2="200" stroke="#aaa" stroke-width="1"/>
-  <text x="70" y="225" fill="#888" font-size="10" text-anchor="middle">横盘整理</text>
-  <!-- 普通缺口 - 用K线展示 -->
-  <rect x="110" y="140" width="18" height="20" fill="#e74c3c" rx="1"/>
-  <line x1="119" y1="140" x2="119" y2="130" stroke="#aaa" stroke-width="1"/>
-  <line x1="119" y1="160" x2="119" y2="170" stroke="#aaa" stroke-width="1"/>
-  <!-- 缺口区域 -->
-  <rect x="135" y="130" width="20" height="15" fill="#95a5a6" opacity="0.6" rx="1"/>
-  <line x1="128" y1="140" x2="135" y2="140" stroke="#f39c12" stroke-width="2"/>
-  <line x1="128" y1="170" x2="135" y2="145" stroke="#f39c12" stroke-width="2"/>
-  <text x="145" y="125" fill="#95a5a6" font-size="9" text-anchor="middle">普通缺口</text>
-  <text x="145" y="155" fill="#f39c12" font-size="8" text-anchor="middle">很快回补</text>
-  <rect x="160" y="135" width="18" height="25" fill="#2ecc71" rx="1"/>
-  <line x1="169" y1="135" x2="169" y2="125" stroke="#aaa" stroke-width="1"/>
-  <line x1="169" y1="160" x2="169" y2="170" stroke="#aaa" stroke-width="1"/>
-  <!-- 突破缺口 -->
-  <rect x="195" y="110" width="18" height="30" fill="#e74c3c" rx="1"/>
-  <line x1="204" y1="110" x2="204" y2="95" stroke="#aaa" stroke-width="1"/>
-  <line x1="204" y1="140" x2="204" y2="150" stroke="#aaa" stroke-width="1"/>
-  <!-- 缺口区域 -->
-  <rect x="220" y="95" width="25" height="20" fill="#e74c3c" opacity="0.5" rx="1"/>
-  <line x1="213" y1="110" x2="220" y2="105" stroke="#f39c12" stroke-width="2"/>
-  <line x1="213" y1="150" x2="220" y2="115" stroke="#f39c12" stroke-width="2"/>
-  <text x="232" y="90" fill="#e74c3c" font-size="9" text-anchor="middle">突破缺口</text>
-  <text x="232" y="125" fill="#f39c12" font-size="8" text-anchor="middle">放量突破</text>
-  <rect x="250" y="85" width="18" height="25" fill="#e74c3c" rx="1"/>
-  <line x1="259" y1="85" x2="259" y2="70" stroke="#aaa" stroke-width="1"/>
-  <line x1="259" y1="110" x2="259" y2="120" stroke="#aaa" stroke-width="1"/>
-  <rect x="280" y="70" width="18" height="22" fill="#e74c3c" rx="1"/>
-  <line x1="289" y1="70" x2="289" y2="55" stroke="#aaa" stroke-width="1"/>
-  <line x1="289" y1="92" x2="289" y2="100" stroke="#aaa" stroke-width="1"/>
-  <rect x="310" y="60" width="18" height="20" fill="#e74c3c" rx="1"/>
-  <line x1="319" y1="60" x2="319" y2="45" stroke="#aaa" stroke-width="1"/>
-  <line x1="319" y1="80" x2="319" y2="90" stroke="#aaa" stroke-width="1"/>
-  <!-- 持续缺口 -->
-  <rect x="345" y="45" width="18" height="25" fill="#e74c3c" rx="1"/>
-  <line x1="354" y1="45" x2="354" y2="30" stroke="#aaa" stroke-width="1"/>
-  <line x1="354" y1="70" x2="354" y2="80" stroke="#aaa" stroke-width="1"/>
-  <!-- 缺口区域 -->
-  <rect x="370" y="30" width="25" height="18" fill="#e74c3c" opacity="0.5" rx="1"/>
-  <line x1="363" y1="45" x2="370" y2="39" stroke="#f39c12" stroke-width="2"/>
-  <line x1="363" y1="80" x2="370" y2="48" stroke="#f39c12" stroke-width="2"/>
-  <text x="382" y="25" fill="#e74c3c" font-size="9" text-anchor="middle">持续缺口</text>
-  <text x="382" y="58" fill="#f39c12" font-size="8" text-anchor="middle">趋势加速</text>
-  <rect x="400" y="35" width="18" height="20" fill="#e74c3c" rx="1"/>
-  <line x1="409" y1="35" x2="409" y2="20" stroke="#aaa" stroke-width="1"/>
-  <line x1="409" y1="55" x2="409" y2="65" stroke="#aaa" stroke-width="1"/>
-  <rect x="430" y="30" width="18" height="18" fill="#e74c3c" rx="1"/>
-  <line x1="439" y1="30" x2="439" y2="15" stroke="#aaa" stroke-width="1"/>
-  <line x1="439" y1="48" x2="439" y2="55" stroke="#aaa" stroke-width="1"/>
-  <!-- 竭尽缺口 -->
-  <rect x="465" y="20" width="18" height="15" fill="#e74c3c" rx="1"/>
-  <line x1="474" y1="20" x2="474" y2="8" stroke="#aaa" stroke-width="1"/>
-  <line x1="474" y1="35" x2="474" y2="42" stroke="#aaa" stroke-width="1"/>
-  <!-- 缺口区域 -->
-  <rect x="490" y="8" width="25" height="15" fill="#f39c12" opacity="0.6" rx="1"/>
-  <line x1="483" y1="20" x2="490" y2="15" stroke="#f39c12" stroke-width="2"/>
-  <line x1="483" y1="42" x2="490" y2="23" stroke="#f39c12" stroke-width="2"/>
-  <text x="502" y="5" fill="#f39c12" font-size="9" text-anchor="middle">竭尽缺口</text>
-  <rect x="520" y="15" width="18" height="12" fill="#e74c3c" rx="1"/>
-  <line x1="529" y1="15" x2="529" y2="5" stroke="#aaa" stroke-width="1"/>
-  <line x1="529" y1="27" x2="529" y2="35" stroke="#aaa" stroke-width="1"/>
-  <!-- 回补走势 -->
-  <rect x="550" y="25" width="18" height="18" fill="#2ecc71" rx="1"/>
-  <line x1="559" y1="25" x2="559" y2="15" stroke="#aaa" stroke-width="1"/>
-  <line x1="559" y1="43" x2="559" y2="52" stroke="#aaa" stroke-width="1"/>
-  <rect x="580" y="40" width="18" height="25" fill="#2ecc71" rx="1"/>
-  <line x1="589" y1="40" x2="589" y2="28" stroke="#aaa" stroke-width="1"/>
-  <line x1="589" y1="65" x2="589" y2="75" stroke="#aaa" stroke-width="1"/>
-  <rect x="610" y="60" width="18" height="30" fill="#2ecc71" rx="1"/>
-  <line x1="619" y1="60" x2="619" y2="48" stroke="#aaa" stroke-width="1"/>
-  <line x1="619" y1="90" x2="619" y2="100" stroke="#aaa" stroke-width="1"/>
-  <rect x="640" y="85" width="18" height="35" fill="#2ecc71" rx="1"/>
-  <line x1="649" y1="85" x2="649" y2="70" stroke="#aaa" stroke-width="1"/>
-  <line x1="649" y1="120" x2="649" y2="130" stroke="#aaa" stroke-width="1"/>
-  <!-- 回补缺口指示 -->
-  <path d="M565,52 L565,70 L595,85 L625,105 L655,125" fill="none" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="600" y="140" fill="#f39c12" font-size="10" text-anchor="middle">↓ 回补缺口 ↓</text>
+  <rect x="30" y="200" width="18" height="25" fill="#e74c3c" rx="1"/>
+  <line x1="39" y1="200" x2="39" y2="190" stroke="#aaa" stroke-width="1"/>
+  <line x1="39" y1="225" x2="39" y2="235" stroke="#aaa" stroke-width="1"/>
+  <rect x="55" y="205" width="18" height="20" fill="#2ecc71" rx="1"/>
+  <line x1="64" y1="205" x2="64" y2="195" stroke="#aaa" stroke-width="1"/>
+  <line x1="64" y1="225" x2="64" y2="235" stroke="#aaa" stroke-width="1"/>
+  <rect x="80" y="210" width="18" height="22" fill="#e74c3c" rx="1"/>
+  <line x1="89" y1="210" x2="89" y2="200" stroke="#aaa" stroke-width="1"/>
+  <line x1="89" y1="232" x2="89" y2="240" stroke="#aaa" stroke-width="1"/>
+  <text x="70" y="265" fill="#888" font-size="10" text-anchor="middle">横盘整理</text>
+  <!-- 普通缺口：相邻K线垂直跳空，然后回补 -->
+  <rect x="110" y="180" width="18" height="20" fill="#e74c3c" rx="1"/>
+  <line x1="119" y1="180" x2="119" y2="170" stroke="#aaa" stroke-width="1"/>
+  <line x1="119" y1="200" x2="119" y2="210" stroke="#aaa" stroke-width="1"/>
+  <!-- 普通缺口：垂直方向的价格真空（灰色区域） -->
+  <rect x="108" y="155" width="22" height="20" fill="#95a5a6" opacity="0.6" rx="1"/>
+  <line x1="119" y1="170" x2="119" y2="155" stroke="#f39c12" stroke-width="2"/>
+  <text x="145" y="165" fill="#95a5a6" font-size="9" text-anchor="middle">普通缺口</text>
+  <text x="145" y="178" fill="#f39c12" font-size="8" text-anchor="middle">很快回补</text>
+  <!-- 回补的阴线 -->
+  <rect x="135" y="175" width="18" height="25" fill="#2ecc71" rx="1"/>
+  <line x1="144" y1="175" x2="144" y2="165" stroke="#aaa" stroke-width="1"/>
+  <line x1="144" y1="200" x2="144" y2="210" stroke="#aaa" stroke-width="1"/>
+  <!-- 突破缺口：大幅向上跳空 -->
+  <rect x="170" y="120" width="18" height="30" fill="#e74c3c" rx="1"/>
+  <line x1="179" y1="120" x2="179" y2="105" stroke="#aaa" stroke-width="1"/>
+  <line x1="179" y1="150" x2="179" y2="160" stroke="#aaa" stroke-width="1"/>
+  <!-- 突破缺口区域 -->
+  <rect x="168" y="85" width="22" height="25" fill="#e74c3c" opacity="0.5" rx="1"/>
+  <line x1="179" y1="105" x2="179" y2="85" stroke="#f39c12" stroke-width="2"/>
+  <text x="205" y="98" fill="#e74c3c" font-size="9" text-anchor="middle">突破缺口</text>
+  <text x="205" y="112" fill="#f39c12" font-size="8" text-anchor="middle">放量</text>
+  <!-- 突破后的上涨K线 -->
+  <rect x="200" y="75" width="18" height="25" fill="#e74c3c" rx="1"/>
+  <line x1="209" y1="75" x2="209" y2="60" stroke="#aaa" stroke-width="1"/>
+  <line x1="209" y1="100" x2="209" y2="110" stroke="#aaa" stroke-width="1"/>
+  <rect x="230" y="60" width="18" height="22" fill="#e74c3c" rx="1"/>
+  <line x1="239" y1="60" x2="239" y2="45" stroke="#aaa" stroke-width="1"/>
+  <line x1="239" y1="82" x2="239" y2="92" stroke="#aaa" stroke-width="1"/>
+  <!-- 持续缺口：趋势中途再次跳空 -->
+  <rect x="260" y="45" width="18" height="25" fill="#e74c3c" rx="1"/>
+  <line x1="269" y1="45" x2="269" y2="30" stroke="#aaa" stroke-width="1"/>
+  <line x1="269" y1="70" x2="269" y2="80" stroke="#aaa" stroke-width="1"/>
+  <!-- 持续缺口区域 -->
+  <rect x="258" y="15" width="22" height="22" fill="#e74c3c" opacity="0.5" rx="1"/>
+  <line x1="269" y1="30" x2="269" y2="15" stroke="#f39c12" stroke-width="2"/>
+  <text x="295" y="28" fill="#e74c3c" font-size="9" text-anchor="middle">持续缺口</text>
+  <text x="295" y="42" fill="#f39c12" font-size="8" text-anchor="middle">加速</text>
+  <!-- 持续缺口后的上涨 -->
+  <rect x="290" y="25" width="18" height="20" fill="#e74c3c" rx="1"/>
+  <line x1="299" y1="25" x2="299" y2="10" stroke="#aaa" stroke-width="1"/>
+  <line x1="299" y1="45" x2="299" y2="55" stroke="#aaa" stroke-width="1"/>
+  <rect x="320" y="15" width="18" height="18" fill="#e74c3c" rx="1"/>
+  <line x1="329" y1="15" x2="329" y2="5" stroke="#aaa" stroke-width="1"/>
+  <line x1="329" y1="33" x2="329" y2="43" stroke="#aaa" stroke-width="1"/>
+  <!-- 竭尽缺口：趋势末端最后一次跳空 -->
+  <rect x="350" y="20" width="18" height="15" fill="#e74c3c" rx="1"/>
+  <line x1="359" y1="20" x2="359" y2="8" stroke="#aaa" stroke-width="1"/>
+  <line x1="359" y1="35" x2="359" y2="45" stroke="#aaa" stroke-width="1"/>
+  <!-- 竭尽缺口区域 -->
+  <rect x="348" y="-5" width="22" height="18" fill="#f39c12" opacity="0.6" rx="1"/>
+  <line x1="359" y1="8" x2="359" y2="-5" stroke="#f39c12" stroke-width="2"/>
+  <text x="385" y="5" fill="#f39c12" font-size="9" text-anchor="middle">竭尽缺口</text>
+  <!-- 竭尽后的最后一涨 -->
+  <rect x="380" y="15" width="18" height="12" fill="#e74c3c" rx="1"/>
+  <line x1="389" y1="15" x2="389" y2="5" stroke="#aaa" stroke-width="1"/>
+  <line x1="389" y1="27" x2="389" y2="37" stroke="#aaa" stroke-width="1"/>
+  <!-- 回补走势：下跌回补缺口 -->
+  <rect x="410" y="30" width="18" height="18" fill="#2ecc71" rx="1"/>
+  <line x1="419" y1="30" x2="419" y2="20" stroke="#aaa" stroke-width="1"/>
+  <line x1="419" y1="48" x2="419" y2="58" stroke="#aaa" stroke-width="1"/>
+  <rect x="440" y="45" width="18" height="25" fill="#2ecc71" rx="1"/>
+  <line x1="449" y1="45" x2="449" y2="33" stroke="#aaa" stroke-width="1"/>
+  <line x1="449" y1="70" x2="449" y2="80" stroke="#aaa" stroke-width="1"/>
+  <rect x="470" y="65" width="18" height="30" fill="#2ecc71" rx="1"/>
+  <line x1="479" y1="65" x2="479" y2="53" stroke="#aaa" stroke-width="1"/>
+  <line x1="479" y1="95" x2="479" y2="105" stroke="#aaa" stroke-width="1"/>
+  <rect x="500" y="90" width="18" height="35" fill="#2ecc71" rx="1"/>
+  <line x1="509" y1="90" x2="509" y2="75" stroke="#aaa" stroke-width="1"/>
+  <line x1="509" y1="125" x2="509" y2="135" stroke="#aaa" stroke-width="1"/>
+  <!-- 回补完成指示 -->
+  <path d="M425,58 L425,75 L455,90 L485,110 L515,135" fill="none" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="465" y="155" fill="#f39c12" font-size="10" text-anchor="middle">↓ 回补缺口 ↓</text>
+  <!-- 图例说明 -->
+  <rect x="530" y="200" width="150" height="140" fill="#252b3d" rx="5"/>
+  <text x="605" y="220" fill="#e0e0e0" font-size="11" font-family="sans-serif" text-anchor="middle" font-weight="bold">缺口示意图例</text>
+  <rect x="540" y="235" width="15" height="10" fill="#95a5a6" opacity="0.6" rx="1"/>
+  <text x="565" y="244" fill="#aaa" font-size="9">普通缺口</text>
+  <rect x="540" y="255" width="15" height="10" fill="#e74c3c" opacity="0.5" rx="1"/>
+  <text x="565" y="264" fill="#aaa" font-size="9">突破/持续缺口</text>
+  <rect x="540" y="275" width="15" height="10" fill="#f39c12" opacity="0.6" rx="1"/>
+  <text x="565" y="284" fill="#aaa" font-size="9">竭尽缺口</text>
+  <line x1="540" y1="300" x2="555" y2="300" stroke="#f39c12" stroke-width="2"/>
+  <text x="565" y="304" fill="#aaa" font-size="9">跳空边界</text>
   <!-- 标题 -->
-  <text x="350" y="295" fill="#e0e0e0" font-size="13" font-family="sans-serif" text-anchor="middle">上涨过程中的四种缺口及其演变</text>
-  <text x="350" y="312" fill="#888" font-size="10" font-family="sans-serif" text-anchor="middle">普通缺口（灰）→ 突破缺口（红）→ 持续缺口（红）→ 竭尽缺口（橙）→ 回补</text>
+  <text x="350" y="360" fill="#e0e0e0" font-size="13" font-family="sans-serif" text-anchor="middle">上涨过程中的四种缺口及其演变</text>
 </svg>
 
 ### 5.0.2 缺口的实战意义
