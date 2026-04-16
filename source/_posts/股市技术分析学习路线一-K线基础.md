@@ -613,39 +613,59 @@ K线（蜡烛图）起源于18世纪日本大阪的稻米期货市场，由米�
 
 **缺口（Gap）**：当日的最低价高于前一日的最高价，或当日的最高价低于前一日的最低价，在K线图上形成的价格"真空地带"。
 
-<svg viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:20px auto;max-width:100%;">
-  <rect width="500" height="280" fill="#1a1f2e" rx="8"/>
-  <!-- 昨日K线 -->
-  <rect x="100" y="120" width="35" height="70" fill="#e74c3c" rx="1"/>
-  <line x1="117" y1="120" x2="117" y2="100" stroke="#aaa" stroke-width="1.5"/>
-  <line x1="117" y1="190" x2="117" y2="210" stroke="#aaa" stroke-width="1.5"/>
-  <text x="117" y="240" fill="#aaa" font-size="11" font-family="sans-serif" text-anchor="middle">昨日</text>
-  <!-- 昨日最高价标注 -->
-  <line x1="135" y1="100" x2="180" y2="100" stroke="#e74c3c" stroke-width="1" stroke-dasharray="4,2"/>
-  <text x="190" y="104" fill="#e74c3c" font-size="10" font-family="sans-serif">昨日最高价</text>
-  <!-- 缺口区域（垂直方向的价格真空） -->
-  <rect x="165" y="65" width="80" height="35" fill="#f39c12" opacity="0.4" rx="2"/>
-  <text x="205" y="87" fill="#f39c12" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="bold">缺口</text>
-  <text x="205" y="102" fill="#f39c12" font-size="9" font-family="sans-serif" text-anchor="middle">价格真空</text>
-  <!-- 今日最低价标注 -->
-  <line x1="230" y1="75" x2="270" y2="75" stroke="#2ecc71" stroke-width="1" stroke-dasharray="4,2"/>
-  <text x="320" y="79" fill="#2ecc71" font-size="10" font-family="sans-serif">今日最低价 &gt; 昨日最高价</text>
-  <!-- 今日K线 -->
-  <rect x="265" y="40" width="35" height="80" fill="#e74c3c" rx="1"/>
-  <line x1="282" y1="40" x2="282" y2="20" stroke="#aaa" stroke-width="1.5"/>
-  <line x1="282" y1="120" x2="282" y2="140" stroke="#aaa" stroke-width="1.5"/>
-  <text x="282" y="240" fill="#aaa" font-size="11" font-family="sans-serif" text-anchor="middle">今日</text>
-  <!-- 向上箭头 -->
-  <path d="M350,180 L350,60" fill="none" stroke="#f39c12" stroke-width="2" marker-end="url(#arrowhead)"/>
+> **关键要点**：缺口判断只看**最低价和最高价**的关系，不看开盘价或收盘价。
+> - 向上缺口：今日最低价 > 昨日最高价
+> - 向下缺口：今日最高价 < 昨日最低价
+
+<svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:20px auto;max-width:100%;">
+  <rect width="520" height="300" fill="#1a1f2e" rx="8"/>
+  <!-- Y轴价格刻度 -->
+  <line x1="40" y1="40" x2="40" y2="260" stroke="#555" stroke-width="1"/>
+  <text x="25" y="45" fill="#888" font-size="9" text-anchor="end">105</text>
+  <text x="25" y="105" fill="#888" font-size="9" text-anchor="end">100</text>
+  <text x="25" y="165" fill="#888" font-size="9" text-anchor="end">95</text>
+  <text x="25" y="225" fill="#888" font-size="9" text-anchor="end">90</text>
+  <text x="25" y="265" fill="#888" font-size="9" text-anchor="end">价格</text>
+  <!-- 昨日K线：最高100，最低90，实体95-98 -->
+  <rect x="80" y="135" width="35" height="45" fill="#e74c3c" rx="1"/>
+  <line x1="97" y1="135" x2="97" y2="105" stroke="#aaa" stroke-width="1.5"/>
+  <line x1="97" y1="180" x2="97" y2="225" stroke="#aaa" stroke-width="1.5"/>
+  <text x="97" y="255" fill="#aaa" font-size="11" font-family="sans-serif" text-anchor="middle">昨日</text>
+  <!-- 昨日最高价标注线 y=105 -->
+  <line x1="115" y1="105" x2="200" y2="105" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="150" y="100" fill="#e74c3c" font-size="10" font-family="sans-serif" font-weight="bold">昨日最高价=100</text>
+  <!-- 缺口区域：100到102之间 -->
+  <rect x="155" y="85" width="80" height="20" fill="#f39c12" opacity="0.5" rx="2"/>
+  <text x="195" y="98" fill="#f39c12" font-size="11" font-family="sans-serif" text-anchor="middle" font-weight="bold">缺口</text>
+  <!-- 今日最低价标注线 y=85 (对应价格102) -->
+  <line x1="235" y1="85" x2="320" y2="85" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="278" y="80" fill="#2ecc71" font-size="10" font-family="sans-serif" font-weight="bold">今日最低价=102</text>
+  <!-- 今日K线：最高105，最低102，实体102-104 -->
+  <rect x="260" y="75" width="35" height="20" fill="#e74c3c" rx="1"/>
+  <line x1="277" y1="75" x2="277" y2="45" stroke="#aaa" stroke-width="1.5"/>
+  <line x1="277" y1="95" x2="277" y2="105" stroke="#aaa" stroke-width="1.5"/>
+  <text x="277" y="255" fill="#aaa" font-size="11" font-family="sans-serif" text-anchor="middle">今日</text>
+  <!-- 关键比较标注 -->
+  <path d="M200,95 L235,95" fill="none" stroke="#f39c12" stroke-width="2"/>
+  <polygon points="230,92 235,95 230,98" fill="#f39c12"/>
+  <text x="218" y="92" fill="#f39c12" font-size="10" font-family="sans-serif" font-weight="bold">&gt;</text>
+  <!-- 向上跳空箭头 -->
+  <path d="M360,200 L360,60" fill="none" stroke="#f39c12" stroke-width="2.5" marker-end="url(#arrowhead2)"/>
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#f39c12"/>
     </marker>
   </defs>
-  <text x="370" y="125" fill="#f39c12" font-size="11" font-family="sans-serif">向上跳空</text>
-  <!-- 说明文字 -->
-  <text x="250" y="270" fill="#e0e0e0" font-size="12" font-family="sans-serif" text-anchor="middle">今日最低价(75) &gt; 昨日最高价(100) = 向上缺口</text>
+  <text x="385" y="135" fill="#f39c12" font-size="12" font-family="sans-serif" font-weight="bold">向上跳空</text>
+  <!-- 核心公式 -->
+  <rect x="100" y="270" width="320" height="22" fill="#252b3d" rx="4"/>
+  <text x="260" y="285" fill="#e0e0e0" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="bold">今日最低价(102) &gt; 昨日最高价(100) = 向上缺口 ✓</text>
 </svg>
+
+**缺口与开盘价/收盘价的关系**：
+- 缺口**不看**开盘价和收盘价
+- 只看**最低价**和**最高价**的对比
+- 即使今日收盘价低于昨日收盘价，只要今日最低价 > 昨日最高价，就是向上缺口
 
 ### 5.0.1 四种缺口类型
 
