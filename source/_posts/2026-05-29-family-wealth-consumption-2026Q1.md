@@ -27,6 +27,9 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 
 ---
 
+
+![报告封面](/images/2026-05-29-family-wealth/chart00-cover.png)
+
 ## 二、收入：工资撑起半边天，但"第二收入来源"在萎缩
 
 ### 核心数字
@@ -80,6 +83,12 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 **年收入超过 100 万元的高收入群体中，自由职业和"未工作"人群的占比重新上升**。这意味着年入百万的人，反而越来越多不是"上班"赚来的——可能是投资收益、知识产权、多套房产租金、或者已经实现了财务自由。收入结构越往上，劳动收入的占比越低——中国的阶层分化不仅体现在收入的绝对数值上，更体现在收入的"来源结构"上。
 
 ---
+
+
+![收入结构概览](/images/2026-05-29-family-wealth/chart20-income-overview.png)
+![收入分布](/images/2026-05-29-family-wealth/chart21-income-distribution.png)
+![不同性别收入对比](/images/2026-05-29-family-wealth/chart22-income-by-gender.png)
+![不同就业状态收入](/images/2026-05-29-family-wealth/chart23-income-by-employment.png)
 
 ## 三、资产：房子还是最大的牌，金融资产在慢慢动
 
@@ -148,6 +157,16 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 环比来看，一线城市股票和理财产品持有比例在上升，非一线城市则在微降。"新三金"（养老第三支柱个人养老金等）的城乡差距相对最小（53.1% vs 51.8%），这可能与政策推动的覆盖面有关。现金和存款的持有比例在不同城市层级上几乎无差异——中国人爱存钱这件事，不分城不城。
 
 ---
+
+
+![金融资产配置](/images/2026-05-29-family-wealth/chart24-financial-assets.png)
+![住房持有详情](/images/2026-05-29-family-wealth/chart25-housing-detail.png)
+![不同年龄住房持有](/images/2026-05-29-family-wealth/chart26-housing-by-age.png)
+![不同收入按揭负担](/images/2026-05-29-family-wealth/chart27-mortgage-by-income.png)
+![负债率分布](/images/2026-05-29-family-wealth/chart28-debt-distribution.png)
+![负债结构](/images/2026-05-29-family-wealth/chart29-debt-structure.png)
+![不同群体负债](/images/2026-05-29-family-wealth/chart30-debt-by-group.png)
+![资产配置总览](/images/2026-05-29-family-wealth/chart31-asset-allocation.png)
 
 ## 四、消费：数字不低，但"体感温度"很低
 
@@ -242,6 +261,26 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 
 ---
 
+
+![不同城市消费对比](/images/2026-05-29-family-wealth/chart32-consumption-by-city.png)
+![消费结构分解](/images/2026-05-29-family-wealth/chart33-consumption-breakdown.png)
+![消费趋势](/images/2026-05-29-family-wealth/chart34-consumption-trend.png)
+![不同收入消费](/images/2026-05-29-family-wealth/chart35-consumption-by-income.png)
+![季度消费变化](/images/2026-05-29-family-wealth/chart36-consumption-quarterly.png)
+![不同群体消费](/images/2026-05-29-family-wealth/chart37-consumption-by-group.png)
+![消费细节1](/images/2026-05-29-family-wealth/chart38-consumption-detail1.png)
+![消费细节2](/images/2026-05-29-family-wealth/chart39-consumption-detail2.png)
+![教育水平消费](/images/2026-05-29-family-wealth/chart40-edu-consumption.png)
+![教育消费详情](/images/2026-05-29-family-wealth/chart41-edu-consumption-detail.png)
+![消费小图1](/images/2026-05-29-family-wealth/chart42-consumption-small1.png)
+![消费小图2](/images/2026-05-29-family-wealth/chart43-consumption-small2.png)
+![消费全景](/images/2026-05-29-family-wealth/chart44-consumption-full.png)
+![不同户籍消费](/images/2026-05-29-family-wealth/chart45-consumption-by-hukou.png)
+![性别消费差异](/images/2026-05-29-family-wealth/chart46-consumption-gender.png)
+![预算匹配小图1](/images/2026-05-29-family-wealth/chart47-budget-small1.png)
+![预算匹配小图2](/images/2026-05-29-family-wealth/chart48-budget-small2.png)
+![预算匹配详情](/images/2026-05-29-family-wealth/chart49-budget-detail.png)
+
 ## 五、家庭责任：养娃和养老，两个最大的消费黑洞
 
 | 家庭类型 | 人均月消费 | 差距 | 教育医疗刚性支出 |
@@ -262,6 +301,12 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 环比来看，无抚育/无赡养家庭 QoQ 消费微升 1.8%，而有赡养责任家庭下降了 6.1%——养老负担对消费的抑制在环比层面更明显。
 
 ---
+
+
+![家庭责任详情](/images/2026-05-29-family-wealth/chart50-family-duty-detail.png)
+![不同年龄家庭责任](/images/2026-05-29-family-wealth/chart51-family-duty-age.png)
+![不同收入家庭责任](/images/2026-05-29-family-wealth/chart52-family-duty-income.png)
+![家庭责任综合](/images/2026-05-29-family-wealth/chart53-family-duty-combined.png)
 
 ## 六、社保、房子、房价：三个消费"稳定器"
 
@@ -312,6 +357,15 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 
 ---
 
+
+![社保小图](/images/2026-05-29-family-wealth/chart54-social-security-small.png)
+![社保缴纳详情](/images/2026-05-29-family-wealth/chart55-social-security-detail.png)
+![住房与消费](/images/2026-05-29-family-wealth/chart56-housing-consumption.png)
+![房价波动影响](/images/2026-05-29-family-wealth/chart57-house-price-impact.png)
+![住房财富效应](/images/2026-05-29-family-wealth/chart58-housing-wealth.png)
+![收入来源1](/images/2026-05-29-family-wealth/chart59-income-source1.png)
+![收入来源2](/images/2026-05-29-family-wealth/chart60-income-source2.png)
+
 ## 七、财产性收入：为什么老百姓赚不到"睡后收入"？
 
 这是原博客最重大的遗漏。报告第四（八）节专门分析了家庭获取财产性收入的**障碍和诉求**，而且是做了非常细致的交叉分组：
@@ -349,6 +403,11 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 ![不同收入家庭获取财产性收入的主要障碍](/images/2026-05-29-family-wealth/chart14-property-income-barriers.png)
 
 ---
+
+
+![财产性收入障碍](/images/2026-05-29-family-wealth/chart61-property-income-barriers.png)
+![城乡财产性收入](/images/2026-05-29-family-wealth/chart62-property-urban-rural.png)
+![不同资产财产性收入](/images/2026-05-29-family-wealth/chart63-property-assets.png)
 
 ## 八、未来预期：66% 的人按兵不动，23% 的人准备"过冬"
 
@@ -403,6 +462,16 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 
 ---
 
+
+![消费预期品类](/images/2026-05-29-family-wealth/chart64-expectation-category.png)
+![不同收入预期](/images/2026-05-29-family-wealth/chart65-expectation-income.png)
+![预期指数](/images/2026-05-29-family-wealth/chart66-expectation-index.png)
+![就业预期](/images/2026-05-29-family-wealth/chart67-expectation-employment.png)
+![工作预期](/images/2026-05-29-family-wealth/chart68-expectation-job.png)
+![资产预期](/images/2026-05-29-family-wealth/chart69-expectation-asset.png)
+![预期分解1](/images/2026-05-29-family-wealth/chart70-expectation-breakdown1.png)
+![预期分解2](/images/2026-05-29-family-wealth/chart71-expectation-breakdown2.png)
+
 ## 九、一季度实际表现 vs 预期
 
 报告把一季度实际消费和 Q4 的预期做了对比：
@@ -415,6 +484,13 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 ![Q4预期 vs Q1实际消费对比](/images/2026-05-29-family-wealth/chart17-expectation-vs-actual.png)
 
 ---
+
+
+![预期vs实际1](/images/2026-05-29-family-wealth/chart72-actual-vs-expected1.png)
+![预期vs实际2](/images/2026-05-29-family-wealth/chart73-actual-vs-expected2.png)
+![实际消费品类](/images/2026-05-29-family-wealth/chart74-actual-by-category.png)
+![实际消费群体](/images/2026-05-29-family-wealth/chart75-actual-by-group.png)
+![实际消费总结](/images/2026-05-29-family-wealth/chart76-actual-summary.png)
 
 ## 十、报告六条政策建议（附点评）
 
@@ -429,6 +505,13 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 
 ---
 
+
+![政策建议1](/images/2026-05-29-family-wealth/chart77-policy1.png)
+![政策建议2](/images/2026-05-29-family-wealth/chart78-policy2.png)
+![政策建议3](/images/2026-05-29-family-wealth/chart79-policy3.png)
+![政策建议4](/images/2026-05-29-family-wealth/chart80-policy4.png)
+![政策总览](/images/2026-05-29-family-wealth/chart81-policy-summary.png)
+
 ## 十一、总结：五个核心判断
 
 **判断一：收入端不差，但结构脆弱。** 人均年收入 5.2 万同比增 3.4%，数字不差。但 63% 依赖工资、多样性收入来源在萎缩——一旦就业市场出问题，收入端的韧性非常脆弱。财产性收入仅 2.8% 的家庭以此为主，"睡后收入"几乎为零。
@@ -442,5 +525,18 @@ description: 深度解读厦门大学&蚂蚁集团《中国家庭财富与消费
 **判断五：信心修复需要时间——且需要多引擎同时发力。** 66% 的人选择维持现状，23% 的人选择削减消费。财产性收入渠道的缺失是一个被低估的结构性问题——农村家庭缺的是资产确权，城镇家庭缺的是可信赖的投资渠道。只有当"计划增加消费"的比例显著超越 11% 时，中国消费才算真正回暖。
 
 ---
+
+
+![附录1](/images/2026-05-29-family-wealth/chart82-appendix1.png)
+![附录2](/images/2026-05-29-family-wealth/chart83-appendix2.png)
+![附录3](/images/2026-05-29-family-wealth/chart84-appendix3.png)
+![附录4](/images/2026-05-29-family-wealth/chart85-appendix4.png)
+![附录5](/images/2026-05-29-family-wealth/chart86-appendix5.png)
+![附录6](/images/2026-05-29-family-wealth/chart87-appendix6.png)
+![附录大图](/images/2026-05-29-family-wealth/chart88-appendix-large.png)
+![方法论](/images/2026-05-29-family-wealth/chart89-methodology.png)
+![附录小图1](/images/2026-05-29-family-wealth/chart90-appendix-small1.png)
+![附录小图2](/images/2026-05-29-family-wealth/chart91-appendix-small2.png)
+![封底](/images/2026-05-29-family-wealth/chart92-back-cover.jpg)
 
 *报告来源：厦门大学经济学科 × 蚂蚁集团研究院《中国家庭财富与消费报告（2026年第一季度）》，2026 年 5 月发布。数据基于全国 14,967 份有效问卷，经第七次人口普查数据加权。调查投放渠道为支付宝 APP 消息盒子，投放时间 2026/3/25-3/31。季度对比数据仅限相同渠道样本。*
